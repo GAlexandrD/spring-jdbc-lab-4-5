@@ -2,7 +2,6 @@ package com.example.lab45.Task;
 
 import com.example.lab45.Task.dto.CreateTaskDto;
 import com.example.lab45.Task.dto.UpdateTaskDto;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -16,7 +15,6 @@ import java.util.Objects;
 public class TaskService {
   private final TaskRepository taskRepository;
 
-  @Autowired
   public TaskService(TaskRepository taskRepository) {
     this.taskRepository = taskRepository;
   }
