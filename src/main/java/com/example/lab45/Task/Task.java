@@ -1,7 +1,5 @@
 package com.example.lab45.Task;
 
-import jakarta.persistence.*;
-
 import java.util.Date;
 
 public class Task {
