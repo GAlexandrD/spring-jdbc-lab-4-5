@@ -1,10 +1,10 @@
 package com.example.lab45.Task;
 
-import com.example.taskmanager.Task.dto.UpdateTaskDto;
-import com.example.taskmanager.Task.errors.DataBaseException;
-import com.example.taskmanager.Task.errors.InvalidSortParamException;
-import com.example.taskmanager.Task.errors.TaskNotFoundException;
-import com.example.taskmanager.Task.utils.DateParser;
+import com.example.lab45.Task.dto.UpdateTaskDto;
+import com.example.lab45.Task.errors.DataBaseException;
+import com.example.lab45.Task.errors.InvalidSortParamException;
+import com.example.lab45.Task.errors.TaskNotFoundException;
+import com.example.lab45.Task.utils.DateParser;
 import org.springframework.dao.IncorrectResultSizeDataAccessException;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;

@@ -1,6 +1,6 @@
 package com.example.lab45.Task;
 
-import com.example.taskmanager.Task.dto.UpdateTaskDto;
+import com.example.lab45.Task.dto.UpdateTaskDto;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
