@@ -4,6 +4,7 @@ import com.example.lab45.Task.dto.CreateTaskDto;
 import com.example.lab45.Task.dto.UpdateTaskDto;
 import com.example.lab45.Task.errors.DataBaseException;
 import com.example.lab45.Task.errors.DateParseException;
+import com.example.lab45.Task.errors.InvalidSortParamException;
 import com.example.lab45.Task.errors.TaskNotFoundException;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
@@ -117,7 +118,11 @@ public class TaskController {
     public ErrorResponse handleNFException(Exception ex) {
         return ErrorResponse.create(ex, HttpStatus.NOT_FOUND, ex.getMessage());
     }
-    @ExceptionHandler({DataBaseException.class, DateParseException.class})
+    @ExceptionHandler({
+            DataBaseException.class,
+            DateParseException.class,
+            InvalidSortParamException.class
+    })
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ErrorResponse handleBRException(Exception ex) {
         return ErrorResponse.create(ex, HttpStatus.BAD_REQUEST, ex.getMessage());
